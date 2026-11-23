@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhruvrajsinh Vansia — Satellite Engineering Portfolio</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="description" content="Satellite Engineering portfolio showcasing avionics, power systems, and embedded projects for space applications">
+</head>
+<body>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <h1>Dhruvrajsinh Vansia</h1>
+            <p class="subtitle">MSc Space Sciences & Technologies | University of Bremen</p>
+            <p class="tagline">Satellite Engineering — Avionics & Power Systems</p>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="https://github.com/dvvansia" class="btn btn-secondary" target="_blank">GitHub Profile</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2>About</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>MSc Space Sciences and Technologies student at the University of Bremen, specializing in Sensing, Processing and Communication. Focused on satellite avionics, power systems, and embedded electronics for space applications.</p>
+                    <p>Currently building a portfolio of flight-grade hardware projects including power distribution units, RF link analysis tools, and multi-sensor telemetry systems — all designed with industry standards and documented for reproducibility.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">Satellite Projects</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">4</span>
+                        <span class="stat-label">Published on GitHub</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">93%</span>
+                        <span class="stat-label">Buck Converter Efficiency</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                
+                <!-- Project 1: CubeSat OBC PDU -->
+                <article class="project-card featured">
+                    <div class="project-badge">Latest</div>
+                    <h3>CubeSat OBC Power Distribution Unit</h3>
+                    <p class="project-meta">KiCAD 9.0 • 4-Layer PCB • INA199 Current Sensing</p>
+                    <p class="project-description">Flight-grade power distribution system for 1U CubeSat OBC with 4 regulated rails (3V3_DIG, 3V3_ANA, 5V0_IO, 3V3_MEM), comprehensive protection (reverse polarity, overcurrent, thermal), and telemetry feedback via INA199 high-side current sense amplifiers.</p>
+                    <ul class="project-features">
+                        <li>8-sheet hierarchical KiCAD schematic (ERC passed: 0 errors)</li>
+                        <li>LM5050-1 ideal diode ORing + TVS protection</li>
+                        <li>REF5033 precision reference for analog rail (3.3 µVrms noise)</li>
+                        <li>16-pin OBC backplane connector with fail-safe boot pull-downs</li>
+                        <li>Full telemetry: 4× current monitors + battery voltage divider</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://github.com/dvvansia/CubeSat_OBC_Power_Distribution" class="btn btn-small" target="_blank">View Repository</a>
+                        <a href="Documentation/README.md" class="btn btn-small btn-outline" target="_blank">Documentation</a>
+                    </div>
+                </article>
+
+                <!-- Project 2: Satellite Sensor Node -->
+                <article class="project-card">
+                    <h3>Satellite Sensor Node Schematic</h3>
+                    <p class="project-meta">KiCAD 9.0 • ATmega328P • BMP280 + XBee</p>
+                    <p class="project-description">Complete schematic design for satellite-compatible sensor node featuring ATmega328P MCU, environmental sensors (BMP280, LM35), 3.3V LDO regulation, and XBee wireless communication module with test points for debugging.</p>
+                    <ul class="project-features">
+                        <li>KiCAD 9.0 hierarchical schematic (ERC verified)</li>
+                        <li>AMS1117-3.3 LDO with 500mA capacity</li>
+                        <li>11 test points for critical nets (power, I2C, UART, ADC)</li>
+                        <li>PDF + SVG schematic exports</li>
+                        <li>Arduino firmware example included</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://github.com/dvvansia/Satelliet_Sensor_Node" class="btn btn-small" target="_blank">View Repository</a>
+                    </div>
+                </article>
+
+                <!-- Project 3: RF Link Budget Calculator -->
+                <article class="project-card">
+                    <h3>RF Link Budget Calculator</h3>
+                    <p class="project-meta">MATLAB • BPSK/QPSK • Eb/N0 Analysis</p>
+                    <p class="project-description">MATLAB-based satellite RF link budget calculator computing Eb/N0, BER, and link margin for BPSK/QPSK modulation. Validates communication links for LEO, GEO, and CubeSat missions with Friis equation and noise analysis.</p>
+                    <ul class="project-features">
+                        <li>Friis transmission equation implementation</li>
+                        <li>BER curves for BPSK/QPSK (erfc-based)</li>
+                        <li>3 test scenarios: LEO (400km), GEO (35,786km), CubeSat UHF</li>
+                        <li>Link margin verification with pass/fail verdict</li>
+                        <li>GUI development ready (App Designer)</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://github.com/dvvansia/RF_Link_Budget_Calculator" class="btn btn-small" target="_blank">View Repository</a>
+                    </div>
+                </article>
+
+                <!-- Project 4: ADC Sensor Interface -->
+                <article class="project-card">
+                    <h3>ADC Sensor Interface (Proteus)</h3>
+                    <p class="project-meta">Proteus 8 • ATmega328P • Multi-Channel Telemetry</p>
+                    <p class="project-description">Multi-channel ADC sensor interface simulation in Proteus featuring ATmega328P, LM35 temperature sensors, and wireless telemetry output. Mirrors ISRO PRL sensor node experience with calibrated sensor readings.</p>
+                    <ul class="project-features">
+                        <li>Proteus 8 Professional simulation</li>
+                        <li>4-channel ADC with LM35 sensors</li>
+                        <li>UART telemetry output format defined</li>
+                        <li>Arduino firmware with calibration routines</li>
+                        <li>GitHub published with simulation files</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://github.com/dvvansia/adc_sensor_interface_proteus" class="btn btn-small" target="_blank">View Repository</a>
+                    </div>
+                </article>
+
+                <!-- Project 5: Buck Converter LTSpice -->
+                <article class="project-card">
+                    <h3>Buck Converter (LTSpice)</h3>
+                    <p class="project-meta">LTSpice • 93% Efficiency • 12V→3.3V</p>
+                    <p class="project-description">High-efficiency buck converter simulation in LTSpice converting 12V input to 3.3V output at 500mA load. Achieves 93% efficiency with optimized switching frequency, inductor selection, and output capacitor filtering.</p>
+                    <ul class="project-features">
+                        <li>LTSpice switching regulator simulation</li>
+                        <li>93% efficiency at full load (500mA)</li>
+                        <li>Ripple analysis: &lt;50mV peak-to-peak</li>
+                        <li>Transient response verification</li>
+                        <li>Complete report with waveforms</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://github.com/dvvansia/buck_convertor_LTSpice" class="btn btn-small" target="_blank">View Repository</a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>EDA Tools</h3>
+                    <ul>
+                        <li>KiCAD 9.0</li>
+                        <li>LTSpice</li>
+                        <li>Proteus 8 Professional</li>
+                        <li>MATLAB</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Embedded Systems</h3>
+                    <ul>
+                        <li>ATmega328P</li>
+                        <li>Arduino</li>
+                        <li>C/C++</li>
+                        <li>FreeRTOS</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Power Electronics</h3>
+                    <ul>
+                        <li>Buck/Boost Converters</li>
+                        <li>LDO Regulators</li>
+                        <li>Current Sensing</li>
+                        <li>Thermal Management</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Communication</h3>
+                    <ul>
+                        <li>I2C / SPI / UART</li>
+                        <li>Zigbee / XBee</li>
+                        <li>RF Link Budget</li>
+                        <li>ADC Interfacing</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <p>Open for working student positions, internships, and thesis opportunities in satellite avionics and power systems.</p>
+            <div class="contact-links">
+                <a href="mailto:dhruvrajsinh.vansia@example.com" class="contact-item">
+                    <span class="icon">📧</span>
+                    <span>Email</span>
+                </a>
+                <a href="https://github.com/dvvansia" class="contact-item" target="_blank">
+                    <span class="icon">🐙</span>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://linkedin.com/in/dvvansia" class="contact-item" target="_blank">
+                    <span class="icon">💼</span>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://uni-bremen.de" class="contact-item" target="_blank">
+                    <span class="icon">🎓</span>
+                    <span>University of Bremen</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Dhruvrajsinh Vansia. Built with HTML, CSS, and passion for space engineering.</p>
+            <p class="location">Bremen, Germany</p>
+        </div>
+    </footer>
+</body>
+</html>
